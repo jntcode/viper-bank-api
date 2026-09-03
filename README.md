@@ -1,25 +1,36 @@
 # Viper Bank API
 
-API RESTful construída em Java 21 com Spring Boot 3.
+API RESTful construida em Java 21 com Spring Boot 3.
 
 ## Tecnologias
 
 - **Java 21**
 - **Spring Boot 3**
 - **Spring Data JPA**
-- **H2 Database** (desenvolvimento) / **PostgreSQL** (produção)
+- **H2 Database** (desenvolvimento) / **PostgreSQL** (producao)
 - **OpenAPI (Swagger)**
 - **Lombok**
 
 ## Endpoints
 
-| Método | Descrição |
+### Usuarios
+
+| Metodo | Descricao |
 |--------|-----------|
-| `GET /users` | Listar todos os usuários |
-| `GET /users/{id}` | Buscar usuário por ID |
-| `POST /users` | Criar novo usuário |
-| `PUT /users/{id}` | Atualizar usuário |
-| `DELETE /users/{id}` | Deletar usuário |
+| `GET /users` | Listar todos os usuarios |
+| `GET /users/{id}` | Buscar usuario por ID |
+| `POST /users` | Criar novo usuario |
+| `PUT /users/{id}` | Atualizar usuario |
+| `DELETE /users/{id}` | Deletar usuario |
+
+### Transacoes
+
+| Metodo | Descricao |
+|--------|-----------|
+| `GET /users/{userId}/transactions` | Historico de transacoes do usuario |
+| `POST /users/{userId}/deposit?amount=X` | Depositar na conta |
+| `POST /users/{userId}/withdraw?amount=X` | Sacar da conta |
+| `POST /transfers` | Transferir entre usuarios |
 
 ## Como rodar
 
@@ -32,15 +43,16 @@ mvn clean package
 java -jar target/api-0.0.1-SNAPSHOT.jar
 ```
 
-## Documentação (Swagger)
+## Documentacao (Swagger)
 
 Acesse: `http://localhost:8081/swagger-ui.html`
 
-## Domínio
+## Dominio
 
-A API gerencia usuários bancários com as seguintes entidades:
-- **User** (nome, conta, features, cartão, notícias)
-- **Account** (número, agência, saldo, limite)
-- **Card** (número, limite)
-- **Feature** (ícone, descrição)
-- **News** (ícone, descrição)
+A API gerencia usuarios bancarios com as seguintes entidades:
+- **User** (nome, conta, features, cartao, noticias)
+- **Account** (numero, agencia, saldo, limite)
+- **Card** (numero, limite)
+- **Feature** (icone, descricao)
+- **News** (icone, descricao)
+- **Transaction** (tipo, descricao, valor, saldo apos, data)
