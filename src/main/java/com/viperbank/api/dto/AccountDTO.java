@@ -10,14 +10,14 @@ public class AccountDTO {
     private String number;
     private String agency;
     private BigDecimal balance;
-    private BigDecimal limit;
+    private BigDecimal creditLimit;
 
     public static AccountDTO fromEntity(Account account) {
         AccountDTO dto = new AccountDTO();
         dto.setNumber(account.getNumber());
         dto.setAgency(account.getAgency());
         dto.setBalance(account.getBalance());
-        dto.setLimit(account.getLimit());
+        dto.setCreditLimit(account.getCreditLimit());
         return dto;
     }
 
@@ -26,7 +26,7 @@ public class AccountDTO {
                 .number(this.number)
                 .agency(this.agency)
                 .balance(this.balance)
-                .limit(this.limit)
+                .creditLimit(this.creditLimit)
                 .build();
     }
 }

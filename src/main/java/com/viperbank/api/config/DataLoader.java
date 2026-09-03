@@ -22,11 +22,11 @@ public class DataLoader {
                                 .number("12345-6")
                                 .agency("0001")
                                 .balance(new BigDecimal("2500.00"))
-                                .limit(new BigDecimal("5000.00"))
+                                .creditLimit(new BigDecimal("5000.00"))
                                 .build())
                         .card(Card.builder()
                                 .number("1111 2222 3333 4444")
-                                .limit(new BigDecimal("10000.00"))
+                                .creditLimit(new BigDecimal("10000.00"))
                                 .build())
                         .features(List.of(
                                 Feature.builder().icon("transfer").description("Transferência PIX").build(),
