@@ -1,6 +1,6 @@
 # Viper Bank API
 
-API RESTful construida em Java 17 com Spring Boot 3, inspirada no projeto Santander Dev Week 2023 da DIO.
+API RESTful construida em Java 17 com Spring Boot 3.
 
 ## Tecnologias
 
