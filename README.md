@@ -1,25 +1,25 @@
 # Viper Bank API
 
-API RESTful construida em Java 17 com Spring Boot 3.
+API RESTful construída em Java 21 com Spring Boot 3.
 
 ## Tecnologias
 
-- **Java 17**
+- **Java 21**
 - **Spring Boot 3**
 - **Spring Data JPA**
-- **H2 Database** (desenvolvimento) / **PostgreSQL** (producao)
+- **H2 Database** (desenvolvimento) / **PostgreSQL** (produção)
 - **OpenAPI (Swagger)**
 - **Lombok**
 
 ## Endpoints
 
-| Metodo | Descricao |
+| Método | Descrição |
 |--------|-----------|
-| `GET /users` | Listar todos os usuarios |
-| `GET /users/{id}` | Buscar usuario por ID |
-| `POST /users` | Criar novo usuario |
-| `PUT /users/{id}` | Atualizar usuario |
-| `DELETE /users/{id}` | Deletar usuario |
+| `GET /users` | Listar todos os usuários |
+| `GET /users/{id}` | Buscar usuário por ID |
+| `POST /users` | Criar novo usuário |
+| `PUT /users/{id}` | Atualizar usuário |
+| `DELETE /users/{id}` | Deletar usuário |
 
 ## Como rodar
 
@@ -32,15 +32,15 @@ mvn clean package
 java -jar target/api-0.0.1-SNAPSHOT.jar
 ```
 
-## Documentacao (Swagger)
+## Documentação (Swagger)
 
-Acesse: `http://localhost:8080/swagger-ui.html`
+Acesse: `http://localhost:8081/swagger-ui.html`
 
-## Dominio
+## Domínio
 
-A API gerencia usuarios bancarios com as seguintes entidades:
-- **User** (nome, conta, features, cartao, noticias)
-- **Account** (numero, agencia, saldo, limite)
-- **Card** (numero, limite)
-- **Feature** (icone, descricao)
-- **News** (icone, descricao)
+A API gerencia usuários bancários com as seguintes entidades:
+- **User** (nome, conta, features, cartão, notícias)
+- **Account** (número, agência, saldo, limite)
+- **Card** (número, limite)
+- **Feature** (ícone, descrição)
+- **News** (ícone, descrição)
